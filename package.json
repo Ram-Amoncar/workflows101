@@ -1,15 +1,23 @@
 {
-  "name": "learn-test-coverage",
+  "name": "@full-pack/learn-test-coverage",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage"
+    "test": "jest --coverage",
+    "build": "tsup"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "jest": "^29.7.0"
+  },
+  "dependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "@full-pack:registry": "https://npm.pkg.github.com"
   }
 }
