@@ -1,5 +1,5 @@
 {
-  "name": "@full-pack/learn-test-coverage",
+  "name": "learn-test-coverage",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -19,6 +19,6 @@
   },
   "files": ["dist", "README.md"],
   "publishConfig": {
-    "@full-pack:registry": "https://npm.pkg.github.com"
+    "@ram-amoncar:registry": "https://npm.pkg.github.com"
   }
 }
