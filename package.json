@@ -17,6 +17,7 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5"
   },
+  "files": ["dist", "README.md"],
   "publishConfig": {
     "@full-pack:registry": "https://npm.pkg.github.com"
   }
