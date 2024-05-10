@@ -1,16 +1,16 @@
 {
-  "name": "@full-pack/learn-test-coverage",
+  "name": "@ram-amoncar/workflows101",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
     "test": "jest --coverage",
-    "build": "tsup"
+    "build": "tsup && node prependLicense.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",

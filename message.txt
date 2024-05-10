@@ -1,0 +1,6 @@
+/**
+ * @ram-amoncar/workflows101 v1.0.0
+ * Copyright (c) 2024 Ram Amoncar <ramamonkar444@gmail.com>
+ * @license MIT
+ */var m=Object.defineProperty;var t=Object.getOwnPropertyDescriptor;var o=Object.getOwnPropertyNames;var c=Object.prototype.hasOwnProperty;var f=(r,n)=>{for(var e in n)m(r,e,{get:n[e],enumerable:!0})},i=(r,n,e,b)=>{if(n&&typeof n=="object"||typeof n=="function")for(let u of o(n))!c.call(r,u)&&u!==e&&m(r,u,{get:()=>n[u],enumerable:!(b=t(n,u))||b.enumerable});return r};var p=r=>i(m({},"__esModule",{value:!0}),r);var x={};f(x,{sum:()=>s});module.exports=p(x);function s(r,n){return r+n}0&&(module.exports={sum});
+//# sourceMappingURL=sum.cjs.map

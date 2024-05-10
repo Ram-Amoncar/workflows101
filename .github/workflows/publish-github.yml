@@ -1,0 +1,40 @@
+name: Node.js Package to gpr
+
+# trigger when a release is created
+on:
+  release:
+    types: [created]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - run: npm test
+
+  # publish to gpr
+  publish-gpr:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
+          scope: '@ram-amoncar'
+      - run: npm install
+      - name: Update package.json name
+        run: sed -i '2,2s/@full-pack\/workflows101/@ram-amoncar\/workflows101/g' package.json
+      - run: echo registry=https://npm.pkg.github.com/Ram-Amoncar >> .npmrc
+      - run: npm run build
+      - run: cd dist && npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
