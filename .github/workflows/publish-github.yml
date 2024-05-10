@@ -35,6 +35,6 @@ jobs:
         run: sed -i '2,2s/@full-pack\/workflows101/@ram-amoncar\/workflows101/g' package.json
       - run: echo registry=https://npm.pkg.github.com/Ram-Amoncar >> .npmrc
       - run: npm run build
-      - run: npm publish
+      - run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{secrets.PUBLISH_GITHUB_TOKEN}}
